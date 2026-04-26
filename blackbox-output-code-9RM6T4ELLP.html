@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aura Elite Lounge | Premium Grooming Experience</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Add these for better SEO/performance -->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta name="description" content="Experience premium grooming at Aura Elite Lounge. Luxury haircuts, beard grooming, and facials in Your City, India.">
+<style>
+/* Your existing styles + improvements below */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#000;color:#fff;overflow-x:hidden;line-height:1.6;}
+header{position:fixed;width:100%;top:0;background:rgba(0,0,0,0.95);backdrop-filter:blur(10px);display:flex;justify-content:space-between;align-items:center;padding:15px 40px;z-index:1000;transition:0.3s;}
+header.scrolled{background:rgba(0,0,0,0.98);}
+header h1{color:gold;font-weight:700;font-size:1.5rem;}
+nav a{color:#fff;margin:0 20px;text-decoration:none;font-weight:500;transition:0.3s;position:relative;}
+nav a:hover{color:gold;}
+nav a::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:2px;background:gold;transition:0.3s;}
+nav a:hover::after{width:100%;}
+
+section{padding:100px 20px;text-align:center;max-width:1200px;margin:0 auto;}
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(135deg,#000 0%,#111 50%,#1a1a1a 100%);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 20% 80%,rgba(255,215,0,0.1) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(255,215,0,0.05) 0%,transparent 50%);animation:shimmer 6s ease-in-out infinite;}
+@keyframes shimmer{0%,100%{transform:translateX(-100%) scaleX(1);}50%{transform:translateX(100%) scaleX(1.1);}}
+.hero h2{font-size:clamp(2.5rem,5vw,4rem);color:gold;font-weight:700;margin-bottom:20px;text-shadow:0 0 20px rgba(255,215,0,0.5);}
+.hero p{font-size:1.2rem;color:#ccc;margin-bottom:30px;max-width:600px;margin-left:auto;margin-right:auto;}
+
+.btn{display:inline-block;margin-top:20px;padding:15px 35px;background:linear-gradient(45deg,gold,#ffd700);color:#000;border:none;cursor:pointer;border-radius:50px;font-weight:600;font-size:1.1rem;text-transform:uppercase;letter-spacing:1px;box-shadow:0 10px 30px rgba(255,215,0,0.3);transition:all 0.3s;position:relative;overflow:hidden;}
+.btn:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(255,215,0,0.4);}
+.btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent);transition:0.5s;}
+.btn:hover::before{left:100%;}
+
+.services{background:#111;padding:120px 20px;}
+.services h2{font-size:2.5rem;margin-bottom:50px;}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:50px;}
+.card{background:linear-gradient(145deg,#222,#333);padding:40px 25px;border-radius:20px;width:100%;transition:all 0.4s;box-shadow:0 10px 30px rgba(0,0,0,0.3);position:relative;overflow:hidden;}
+.card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,gold,#ffd700);}
+.card:hover{transform:translateY(-15px) scale(1.02);box-shadow:0 25px 50px rgba(255,215,0,0.2);}
+.card h3{font-size:1.5rem;color:gold;margin-bottom:15px;}
+.card p{color:#ccc;}
+
+.gallery{background:linear-gradient(135deg,#000,#111);padding:120px 20px;}
+.gallery h2{font-size:2.5rem;margin-bottom:50px;}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}
+.gallery img{width:100%;height:250px;object-fit:cover;border-radius:15px;transition:0.3s;box-shadow:0 15px 35px rgba(0,0,0,0.5);}
+.gallery img:hover{transform:scale(1.05);box-shadow:0 25px 50px rgba(255,215,0,0.3);}
+
+.contact{background:#111;padding:120px 20px;}
+.contact h2{font-size:2.5rem;margin-bottom:30px;}
+.contact-info{font-size:1.5rem;}
+.contact-info p{margin:20px 0;}
+.contact-info a{color:gold;text-decoration:none;font-weight:500;transition:0.3s;}
+.contact-info a:hover{text-decoration:underline;}
+
+footer{background:#000;padding:30px 20px;text-align:center;color:#aaa;border-top:1px solid #333;}
+footer p{font-size:0.9rem;}
+
+/* Smooth scrolling */
+html{scroll-behavior:smooth;}
+
+/* Mobile improvements */
+@media(max-width:768px){
+    header{padding:15px 20px;flex-direction:column;gap:15px;}
+    header nav{display:flex;flex-wrap:wrap;justify-content:center;}
+    nav a{margin:5px 10px;}
+    section{padding:80px 15px;}
+    .hero{padding:20px;}
+}
+@media(max-width:480px){
+    .cards,.gallery-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<!-- Add scroll effect to header -->
+<header id="header">
+<h1>👑 Aura Elite Lounge</h1>
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<h2>Experience Premium Grooming</h2>
+<p>Luxury salon experience for the modern gentleman. Elevate your style with our elite services.</p>
+<button class="btn" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Book Now</button>
+</section>
+
+<section class="services" id="services">
+<h2>Our Elite Services</h2>
+<div class="cards">
+<div class="card">
+<h3>✂️ Precision Haircut</h3>
+<p>Trendy & stylish cuts tailored to your face shape and lifestyle</p>
+</div>
+<div class="card">
+<h3>🧔 Beard Mastery</h3>
+<p>Perfect grooming with hot towel service and precision shaping</p>
+</div>
+<div class="card">
+<h3>✨ Luxury Facial</h3>
+<p>Deep cleansing, glow enhancement & premium skincare treatment</p>
+</div>
+</div>
+</section>
+
+<section class="gallery" id="gallery">
+<h2>Gallery</h2>
+<div class="gallery-grid">
+<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Premium haircut at Aura Elite">
+<img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beard grooming service">
+<img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury salon interior">
+<img src="https://images.unsplash.com/photo-1574169208507-84376144848b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Facial treatment">
+</div>
+</section>
+
+<section class="contact" id="contact">
+<h2>Get In Touch</h2>
+<div class="contact-info">
+<p>📞 <a href="tel:+919876543210">+91 98765 43210</a></p>
+<p>📍 Premium Location, Your City, India</p>
+<p>🕒 Open 10AM - 9PM (Daily)</p>
+</div>
+</section>
+
+<footer>
+<p>&copy; 2026 Aura Elite Lounge. All rights reserved. | Elevating Men's Grooming</p>
+</footer>
+
+<script>
+// Header scroll effect
+window.addEventListener('scroll', () => {
+    document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Smooth scroll for nav links
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+</body>
+</html>
